@@ -9,15 +9,18 @@ public class LoginButton : MonoBehaviour
     public string nextSceneName = "NewScene";
 
     public void OnButtonPressed()
+{
+    Debug.Log("BUTTON PRESSED");
+
+    if (passwordInput.text.Trim() == correctPassword)
     {
-        if (passwordInput.text == correctPassword)
-        {
-            SceneManager.LoadScene(nextSceneName);
-        }
-        else
-        {
-            errorText.SetActive(true);
-        }
+        errorText.SetActive(false);
+        SceneManager.LoadScene(nextSceneName);
     }
+    else
+    {
+        errorText.SetActive(true);
+    }
+}
 }
 
