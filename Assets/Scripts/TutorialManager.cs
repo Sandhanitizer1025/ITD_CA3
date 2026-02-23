@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
+    public InteractionGate ca5Gate;
+
     [Header("Trigger Zones")]
     public TutorialTrigger trigger1;
     public TutorialTrigger trigger2;
@@ -19,6 +21,9 @@ public class TutorialManager : MonoBehaviour
 
     void Start()
 {
+    if (ca5Gate != null)
+        ca5Gate.SetLocked(true);
+
     trigger1.SetActiveVisual(true);
     trigger2.SetActiveVisual(false);
     trigger3.SetActiveVisual(false);
@@ -74,6 +79,9 @@ public class TutorialManager : MonoBehaviour
             {
                 teleport2.SetActiveVisual(false);
                 congratsUI.SetActive(true);
+
+                if (ca5Gate != null)
+                    ca5Gate.SetLocked(false);
             }
         }
     }

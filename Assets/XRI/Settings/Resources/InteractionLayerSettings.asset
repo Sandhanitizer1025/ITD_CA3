@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LayerNames:
   - Default
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Key_Red
+  - Key_Blue
+  - Key_Green
+  - Crystal
+  - Frame
+  - Ring
   - 
   - 
   - 
